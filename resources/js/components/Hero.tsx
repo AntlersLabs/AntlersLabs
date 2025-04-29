@@ -1,26 +1,20 @@
 'use client'
 import React from 'react'
 import { Link } from '@inertiajs/react'
-import { ArrowRight, Menu, Rocket, X } from 'lucide-react'
+
 import { Button } from '@/components/ui/button'
+import { ArrowRight, Rocket } from 'lucide-react'
 
 
-const menuItems = [
-    { name: 'Features', href: '#' },
-    { name: 'Solution', href: '#' },
-    { name: 'Pricing', href: '#' },
-    { name: 'About', href: '#' },
-]
 
 export default function HeroSection() {
-    const [menuState, setMenuState] = React.useState(false)
 
     return (
         <>
-     
+
             <main className="overflow-hidden relative">
             <div className="absolute inset-0 [background:radial-gradient(125%_125%_at_50%_0%,transparent_40%,var(--color-blue-600),var(--color-white)_100%)]"></div>
-     
+
                 <section>
                     <div className="relative pt-24">
                         <div className="">
@@ -35,9 +29,9 @@ export default function HeroSection() {
                                     <ArrowRight className="size-4" />
                                 </Link>
 
-                                <h1 className="mt-8 text-balance text-4xl font-semibold md:text-5xl xl:text-6xl xl:[line-height:1.125]">Modern Software testing <span className='bg-gradient-to-r bg-orange-800 to-red-400 bg-clip-text text-transparent'> reimagined</span></h1>
+                                <h1 className="mt-8 text-balance text-4xl font-semibold md:text-5xl xl:text-6xl xl:[line-height:1.125]">Modern Software testing <span className='bg-gradient-to-r bg-blue-600 to-red-400 bg-clip-text text-transparent'> reimagined</span></h1>
                                 <p className="mx-auto mt-8 hidden max-w-2xl text-wrap text-lg sm:block">Where dreams become reality.</p>
-                               
+
 
                                 <div className="mt-8">
                                     <Button
@@ -45,7 +39,7 @@ export default function HeroSection() {
                                         asChild>
                                         <Link href="#">
                                             <Rocket className="relative size-4" />
-                                            <span className="text-nowrap">Start Building</span>
+                                            <span className="text-nowrap">Lets Talk</span>
                                         </Link>
                                     </Button>
                                 </div>
@@ -56,7 +50,7 @@ export default function HeroSection() {
                                 aria-hidden
                                 className="bg-linear-to-b to-background absolute inset-0 z-10 from-transparent from-35%"
                             />
-                          
+
                         </div>
                     </div>
                 </section>
