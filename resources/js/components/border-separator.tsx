@@ -6,9 +6,12 @@ interface BorderSepartorProps {
 }
 const BorderSepartor = ({className}:BorderSepartorProps) => {
   return (
-    <div><div className={cn(' border-y ',className)}>
+    <div>
+      <div className={cn(' border-y ',className)}>
+      <div className=' py-6 w-full bg-[repeating-linear-gradient(-45deg,var(--color-border),var(--color-border)_1px,transparent_1px,transparent_6px)] opacity-35   '>
+<div className=' container border-x '>
 
-    <div className=' py-6 container border-x '>
+</div>
 
     </div>
     
