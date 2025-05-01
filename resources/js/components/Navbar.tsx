@@ -10,6 +10,15 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
   const { appearance, updateAppearance } = useAppearance()
 
+  const menus = [
+    {
+      title: "Home",  href: "/",
+    },
+    {
+        title: "Case Studies",  href: route('study'),
+      },
+  ]
+
   return (
     <header className="sticky top-0 z-50 w-full bg-background border-b ">
       <div className=" container flex h-16 items-center justify-between border-x ">
@@ -19,9 +28,12 @@ const Navbar = () => {
             <AppLogo />
           </Link>
           <nav className="gap-6 hidden md:flex">
-            <Link href="/" className="text-sm font-medium hover:underline underline-offset-4">
-              Home
+            {menus.map((menu)=> (
+            <Link prefetch key={menu.title} href={menu.href} className="text-sm font-medium hover:underline underline-offset-4">
+              {menu.title}
             </Link>
+
+            ))}
 
           </nav>
         </div>
@@ -34,10 +46,7 @@ const Navbar = () => {
             )}
             <span className="sr-only">Toggle theme</span>
           </Button>
-          <Button variant="ghost" size="icon" className="hidden md:flex">
-            <Bell className="h-5 w-5" />
-            <span className="sr-only">Notifications</span>
-          </Button>
+
           <Button variant="ghost" size="icon" className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
             {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
             <span className="sr-only">Menu</span>
@@ -52,12 +61,16 @@ const Navbar = () => {
         isOpen ? "block" : "hidden"
       )}>
         <div className="border-t px-2 py-4 space-y-2">
+            {menus.map((menu)=>(
           <Link
-            href="/"
+          key={menu.title}
+            href={menu.href}
             className="block px-3 py-2 rounded-md text-base font-medium hover:bg-accent hover:text-accent-foreground"
           >
-            Home
+            {menu.title}
           </Link>
+
+            ))}
 
           <div className="px-3 py-2">
             <Button className="w-full">Subscribe</Button>
