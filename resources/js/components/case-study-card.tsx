@@ -3,13 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "@inertiajs/react";
 import { ArrowRight, ArrowUpRightIcon } from "lucide-react";
 
-const product = {
-  name: "Red Hat",
-  href: "#",
 
-  price: "$28",
-  category: "Clothing"
-};
 
 interface StudyProps{
     title?: string,
