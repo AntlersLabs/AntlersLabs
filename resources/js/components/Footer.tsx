@@ -14,7 +14,7 @@ const Footer = () => {
             <div>
               <h3 className="text-lg font-medium mb-4">Lab's Rat project by Antlers Labs</h3>
               <p className="text-lg text-muted-foreground mb-4">
-                In a collective collaboration with Antlers Labs, Adons Tech, PacaLabs, Grand Line: Once Piece and the people of Bangladesh.
+                A product of Lab's Rat project. 
               </p>
               <div className="flex gap-4">
                 <Button variant="ghost" size="icon" className="rounded-full">
